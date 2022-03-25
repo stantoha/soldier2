@@ -1,0 +1,539 @@
+body {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: gray;
+}
+
+.butt{
+    text-align: center;
+}
+.butt a{
+    display: block;
+    margin: 5vh auto;
+    padding: 2vh;
+    background-color: orange;
+    width: 10vh;
+    border-radius: 25%;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900;
+    align-items: stretch;
+    letter-spacing: 1vh;
+}
+
+.soldier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh auto;
+    height: 64vh;
+}
+
+.body__top,
+.body__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.body__part {
+    position: relative;
+    height: 8vh;
+    min-width: 8vh;
+}
+
+.block,
+.vert__block {
+    display: block;
+    height: 8vh;
+    width: 6vh;
+    border: 1px solid black;
+    background-color: rgba(0,0,0,0.6);
+    border-bottom: none;
+    border-top: none;
+    position: absolute;
+    border-radius: 40%;
+    box-shadow: 0 0 0 1vh  rgba(255,255,255,0.5);
+
+}
+
+.vert__block {
+    height: 6vh;
+    width: 8vh;
+}
+
+
+.right .block,
+.right .vert__block {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.left .block,
+.left .vert__block {
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+
+/* HEAD */
+
+.head__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 2vh;
+    top: -3vh;
+}
+
+.head .vert__block{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 150;
+    left: -2vh;
+}
+
+.eye{
+    display: block;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 2vh;
+    z-index: 200;
+}
+
+
+
+
+
+/* HAND */
+
+.hand__container {
+    transform-origin: top ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 2.5vh;
+    left: -1vh;
+}
+
+.hand__container:last-child {
+    left: 3vh;
+    top: 4vh;
+}
+
+.hand__part {
+    position: absolute;
+    min-width: 3vh;
+}
+
+.hand__container .shoulder,
+.hand__container .shoulder .block{
+    width: 4vh;
+    height: 12vh;
+}
+
+
+.hand__container .elbow,
+.hand__container .elbow .block {
+    width: 3vh;
+    height: 3vh;
+}
+
+.elbow{
+    top: 12vh;
+}
+
+
+.hand__container .arm,
+.hand__container .arm .block {
+    width: 3vh;
+    height: 12vh;
+}
+
+.arm{
+    transform-origin: top;
+    top: 15vh;
+}
+
+.hand__container .wirst,
+.hand__container .wirst .block {
+    width: 2vh;
+    height: 6vh;
+    top: 13vh;
+    left: 0;
+}
+
+.right .hand__container .vert__block,
+.right .hand__container .block {
+    z-index: 300;
+}
+
+.left .hand__container .vert__block,
+.left .hand__container .block {
+    z-index: 150;
+}
+
+
+
+
+
+/* LEG */
+
+.leg__container {
+    transform-origin: top ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 40vh;
+}
+
+.leg__part {
+    position: absolute;
+    min-width: 4vh;
+}
+
+.leg__container .hips,
+.leg__container .hips .block{
+  
+    width: 5vh;
+    height: 16vh;
+}
+
+.leg__container .shin,
+.leg__container .shin .block {
+    transform-origin: top;
+    width: 4vh;
+    height: 19vh;
+}
+
+
+.leg__container .knee,
+.leg__container .knee .block {
+    width: 4vh;
+    height: 4vh;
+}
+
+.knee{
+    top: 16vh;
+}
+
+.shin{
+    top: 20vh;
+}
+
+.foot{
+    top: 40vh;
+    left: -4vh;
+}
+
+.leg__container .foot,
+.leg__container .foot .block {
+    transform-origin: top;
+    width: 7vh;
+    height: 3vh;
+}
+
+.left .leg__container{
+    left: -1vh;
+}
+
+.right .leg__container{
+top: 1vh;
+   left: -1vh;
+}
+
+.right .leg__container .vert__block,
+.right .leg__container .block {
+    z-index: 300;
+}
+
+.left .leg__container .vert__block,
+.left .leg__container .block {
+    z-index: 150;
+}
+
+
+/* BODY */
+
+.body__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transform-origin: bottom;
+    transform: rotate(7deg);
+}
+
+.chest .block{
+    left: -1vh;
+    z-index: 200;
+}
+
+.chest .vert__block {
+    top: 2vh;
+    left: 2vh;
+    z-index: 200;
+}
+
+.chest .vert__block:nth-child(odd) {
+    left: -3vh;
+}
+
+.stomach .block {
+    left: 0;
+    z-index: 180;
+}
+
+.stomach .block:last-child{
+    left: -1vh;
+}
+
+.pelvis .block:last-child{
+    left: 1vh;
+    z-index: 200;
+}
+
+.pelvis .vert__block{
+    top: 2vh;
+    left: 0;
+} 
+
+.pelvis .vert__block:last-child {
+    left: -2vh;
+}
+
+.pelvis .block,
+.pelvis .vert__block{
+    z-index: 200;
+}
+
+
+
+/* LEG&HAND__ANIMATION */
+
+
+.right__arm__move{
+    animation: right__arm__move 1.6s linear infinite forwards;
+}
+
+@keyframes right__arm__move{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(65deg);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    75%{
+        transform: rotate(25deg);
+    }
+}
+
+.left__arm__move{
+    animation: left__arm__move 1.6s linear infinite forwards;
+}
+
+@keyframes left__arm__move{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(25deg);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    75%{
+        transform: rotate(65deg);
+    }
+}
+
+.right__shin__move{
+    animation: right__shin__move 1.6s linear infinite forwards;
+}
+
+@keyframes right__shin__move{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(-65deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(-25deg);
+    }
+}
+
+.left__shin__move{
+    animation: left__shin__move 1.6s linear infinite forwards;
+}
+
+@keyframes left__shin__move{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(-25deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(-65deg);
+    }
+}
+
+.right__foot__move{
+    animation: right__foot__move 1.6s linear infinite forwards;
+}
+
+@keyframes right__foot__move{
+    0%{
+        transform: rotate(0) translate(0,0) ;
+    }
+    25%{
+        transform:rotate(0)  translate(14vh,-10vh) ;
+    }
+    50%{
+        transform: rotate(0) translate(1vh,-1vh);
+    }
+    75%{
+        transform: rotate(-10deg)  translate(3vh,-3vh) ;
+    }
+}
+
+.left__foot__move{
+    animation: left__foot__move 1.6s linear infinite forwards;
+}
+
+@keyframes left__foot__move{
+    0%{
+        transform: rotate(0) translate(0,0) ;
+    }
+    25%{
+        transform: rotate(-10deg)  translate(3vh,-3vh)   ;
+    }
+    50%{
+        transform: rotate(0) translate(1vh,-1vh);
+    }
+    75%{
+        transform:rotate(0) translate(14vh,-10vh) ;
+    }
+}
+
+.right__move{
+    animation: right__move 1.6s linear infinite forwards;
+}
+
+@keyframes right__move{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(15deg) translateY(-1vh);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    75%{
+        transform: rotate(-55deg) translateY(1vh);
+    }
+}
+
+.left__move{
+    animation: left__move 1.6s linear infinite forwards;
+}
+
+@keyframes left__move{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(-70deg) translateY(1vh);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    75%{
+        transform: rotate(75deg) translateY(-1vh);
+    }
+}
+
+
+
+
+
+.chest__move{
+    animation: chest__move 1.6s linear infinite forwards;
+}
+
+@keyframes chest__move{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(10deg) ;
+    }
+    50%{
+        transform: rotate(0);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+}
+
+
+
+.stomach__move{
+    animation: stomach__move 1.6s linear infinite forwards;
+}
+
+@keyframes stomach__move{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    75%{
+        transform: rotate(20deg);
+    }
+}
+
+
+.body__move{
+    animation: body__move 0.8s linear infinite forwards;
+}
+
+@keyframes body__move{
+    0%{
+        transform: translateY(1vh);
+    }
+    25%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-1vh);
+    }
+    75%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(1vh);
+    }
+}
